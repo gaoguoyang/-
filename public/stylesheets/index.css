@@ -1,0 +1,135 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100%;
+	background: #010001;
+	color: #fff;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+header,.left,.right{
+	position: absolute;
+}
+header{
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	height: 150px;
+}
+header h1{
+	font-size: 40px;
+	height: 60px;
+	line-height: 60px;
+}
+.left{
+	left: 10px;
+	top: 170px;
+	bottom: 10px;
+	width: 15%;
+	border: 1px solid #fff;
+	overflow: auto;
+}
+.right{
+	top: 170px;
+	right: 10px;
+	bottom: 10px;
+	left: -webkit-calc(15% + 20px);
+	left: calc(15% + 20px);
+}
+
+.left ul{
+	overflow: auto;
+}
+.left ul li{
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.left ul li.selected{
+	color: green;
+}
+.type{
+	width: 160px;
+	height: 25px;
+	border: 1px solid #fff;
+	list-style: none;
+	margin: 5px auto;
+	border-radius: 5px;
+
+}
+.type li{
+	width: 80px;
+	height: 25px;
+	float: left;
+	line-height: 25px;
+	cursor: pointer;
+}
+.type li.selected{
+	background: #fff;
+	color: #000;
+}
+
+input[type="range"]{
+	-webkit-appearance: none;
+	height: 8px;
+	background: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	height: 12px;
+	width: 12px;
+	background: #fff;
+	border-radius: 100%;
+}
+input[type="range"]::-moz-range-track{
+	height: 8px;
+	background: #999;
+	border-radius: 10px;
+	border: none;
+}
+input[type="range"]::-moz-range-thumb{
+	height: 12px;
+	width: 12px;
+	background: #fff;
+	border: none;
+	border-radius: 100%;
+}
+@media screen and (max-width: 800px),screen and (max-height: 500px){
+	body{
+		font-size: 12px;
+	}
+	header{
+		height: 80px;
+	}
+	header h1{
+		font-size: 24px;
+		height: 34px;
+		line-height: 34px;
+	}
+	.type{
+		width: 100px;
+		height: 20px;
+		border: 1px solid #fff;
+		list-style: none;
+		margin: 5px auto;
+		border-radius: 5px;
+	}
+	.type li{
+		width: 50px;
+		height: 20px;
+		float: left;
+		line-height: 20px;
+		cursor: pointer;
+	}
+	
+	.left,.right{
+		top: 100px;
+	}
+}
